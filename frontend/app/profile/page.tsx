@@ -1,10 +1,10 @@
-// import Navbar from "@/components/Navbar";
-// import ProfileForm from "@/components/ProfileForm";
+import Navbar from "@/components/Navbar";
+import ProfileForm from "@/components/ProfileForm";
 
 export default function ProfilePage() {
   return (
     <main className="page-shell">
-      {/* <Navbar /> */}
+      <Navbar />
       <section className="container section-spacing">
         <div className="section-heading centered">
           <p className="eyebrow">Create Profile</p>
@@ -14,7 +14,7 @@ export default function ProfilePage() {
           </p>
         </div>
 
-        {/* <ProfileForm /> */}
+        <ProfileForm />
       </section>
     </main>
   );

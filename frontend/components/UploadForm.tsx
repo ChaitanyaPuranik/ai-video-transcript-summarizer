@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-// import ProgressBar from "./ProgressBar";
+import ProgressBar from "./ProgressBar";
 import TranscriptCard from "./TranscriptCard";
 
 const SAMPLE_TRANSCRIPT = `Speaker 1: Welcome everyone to today's product meeting.
@@ -148,7 +148,7 @@ export default function UploadForm() {
         {isGenerating && (
           <div className="progress-wrapper">
             <p className="progress-label">Transcription is being generated...</p>
-            {/* <ProgressBar progress={progress} /> */}
+            <ProgressBar progress={progress} />
             <p className="progress-percent">{progress}% complete</p>
           </div>
         )}
