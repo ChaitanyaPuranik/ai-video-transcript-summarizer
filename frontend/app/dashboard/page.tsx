@@ -1,5 +1,5 @@
 import Navbar from "@/components/Navbar";
-import ProfileForm from "@/components/ProfileForm";
+import UploadForm from "@/components/UploadForm";
 
 export default function DashboardPage() {
     return (
