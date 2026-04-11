@@ -18,6 +18,7 @@ celery_app.conf.update(
     enable_utc=True,
 )
 
-@celery_app.task
-def add_numbers(a, b):
-    return a + b
+celery_app.autodiscover_tasks(["app.tasks"])
+
+
+import app.tasks.transcription_task 
