@@ -44,7 +44,7 @@ export default function UploadForm() {
       const formData = new FormData();
       formData.append("file", file);
 
-      const res = await fetch(`${BASE_URL}/transcript`, {
+        const res = await fetch(`${BASE_URL}/transcript/upload`, {
         method: "POST",
         body: formData,
       });
@@ -78,7 +78,7 @@ const pollStatus = (taskId: string) => {
       if (data.status === "completed") {
         clearInterval(interval);
         setProgress(100);
-        setTranscript(data.result);
+        setTranscript(data.result?.transcript || "");
         setIsGenerating(false);
         setShowTranscript(true);
       }
